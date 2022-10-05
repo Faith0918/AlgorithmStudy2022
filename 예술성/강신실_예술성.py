@@ -129,9 +129,13 @@ def rotate_square(start, length):
     cc = start[1]
     print("STR", start)
     n_board = [[0 for _ in range(n)] for _ in range(n)]
+    '''if start == [3,3]:
+        pdb.set_trace()'''
     for r in range(rr, rr+length):
         for c in range(cc, cc+length):
+            # pdb.set_trace()
             n_board[c][length-r-1] = board[r][c]
+            
     for r in range(rr, rr+length):
         for c in range(cc, cc+length):
             board[r][c] = n_board[r][c]
