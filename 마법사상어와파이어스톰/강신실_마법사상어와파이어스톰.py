@@ -80,6 +80,7 @@ def get_starting_points(lenn):
 def desolve_ice():
     global board, N, dr, dc
     melt_board = [[0 for _ in range(N)] for _ in range(N)]
+    v = [[False for _ in range(N)] for _ in range(N)]
     for r in range(N):
         for c in range(N):
             if board[r][c]<=0:
